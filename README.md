@@ -1,7 +1,16 @@
 # sticky
 Basic vanilla JS sticky element class
 
-Initialize:
+# documentation
 
+### html markup
+
+### stylesheets
+
+### javascript
+Initialize:
+```js
 let stickyObj = new Sticky(stickyEl, stickyBoundary, viewport, false);
+```
+
 
