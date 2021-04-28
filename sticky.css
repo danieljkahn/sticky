@@ -1,5 +1,167 @@
-.sticky {
+/* Bare necessities */
+
+#stickyA.sticky, #stickyModal.sticky {
 	position: fixed;
 	top: 50px;
 	left: 0px;
+	right: 0;
+	margin: auto;
+	z-index: 1;
 }
+#stickyB.sticky {
+	position: fixed;
+	top: 85px;
+	left: 0px;
+	/*right: 0;
+	margin: auto;*/
+	z-index: 1;
+}
+.sticky-holder {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+
+
+
+
+
+/* Examples CSS */
+
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: none;
+			font-family: sans-serif;
+		}
+		html {
+			line-height: 1.15;
+		  -ms-text-size-adjust: 100%;
+		  -webkit-text-size-adjust: 100%;
+
+			-ms-touch-action: manipulation;
+		    touch-action: manipulation;
+			box-sizing: border-box
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+		html, body {
+			width: 100%;
+		}
+		body {
+			line-height: 1;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing:antialiased;
+			transition: background-color cubic-bezier(0, 0, 0.22, 0.79) 0.25s, color cubic-bezier(0, 0, 0.22, 0.79) 0.25s;
+			text-rendering: optimizeLegibility;
+		}
+		h1 {
+			margin: 1em 0;
+		}
+		p {
+			margin: 1em;
+		}
+		#boundaryA {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50px;
+			background-color: #555;
+			z-index: 1;
+		}
+		#stickyA {
+			position: relative;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			background-color: #880e4f;
+			color: #fff;
+			text-align: center;
+			font-weight: bold;
+		}
+		#stickyB {
+			float: left;
+			width: 100px;
+			background-color: #3333ff;
+		}
+		article, section {
+			position: relative;
+			width: 100%;
+			padding: 1em 0;
+		}
+		article {
+			margin: 50px 0;
+		}
+		.hero {
+			text-align: center;
+		}
+		.inner {
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 768px;
+		}
+		#modal {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 50px 0 0;
+			background-color: #333;
+			color: #fff;
+			z-index: 10;
+		}
+		#modal.hidden {
+			display: none;
+		}
+		#scroller {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow-y: scroll;
+		}
+		#boundaryModal {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			background-color: #000;
+			color: #FFF;
+			text-align: center;
+		}
+		#stickyModal {
+			position: relative;
+			width: 100%;
+			max-width: 768px;
+			height: 35px;
+			line-height: 35px;
+			background-color: #880e4f;
+			color: #fff;
+			text-align: center;
+			font-weight: bold;
+		}
+		a {
+			display: block;
+			float: right;
+			width: 100px;
+			height: 50px;
+			line-height: 50px;
+			color: #ea1754;
+			text-align: right;
+			padding: 0 4px;
+		}
+
+
+
+
+
+
+
+
+
