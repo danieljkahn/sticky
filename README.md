@@ -18,3 +18,6 @@ let viewport = window; // for scrolling modal, set this as overflow container
 let log = false; // set to true for debugging
 let stickyObj = new Sticky(stickyEl, stickyBoundary, viewport, true);
 ```
+
+# next up
+Fix bug on window refresh when already scrolled
