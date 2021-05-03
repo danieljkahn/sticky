@@ -5,7 +5,7 @@ class Sticky {
 		this.stickyHolder = stickyEl.parentNode;
 		this.boundaryEl = boundaryEl;
 		this.stuckScroll = 0;
-		this.elementPos = this.stickyEl.getBoundingClientRect();
+		this.elementPos = this.stickyHolder.getBoundingClientRect();
 		this.boundaryPos = this.boundaryEl.getBoundingClientRect();
 		this.elY = this.elementPos.y;
 		this.boundY = this.boundaryPos.y + this.boundaryPos.height;
