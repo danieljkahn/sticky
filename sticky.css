@@ -87,6 +87,11 @@
 			width: 100px;
 			background-color: #3333ff;
 		}
+		.sticky-holderB {
+			position: relative;
+			float: left;
+			width: 100px;
+		}
 		article, section {
 			position: relative;
 			width: 100%;
