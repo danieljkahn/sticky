@@ -16,7 +16,7 @@
 				<h1>Sticky.js Examples</h1>
 			</section>
 			<div class="sticky-holder">
-				<div id="stickyA">Sticky Element A</div>
+				<div id="stickyA" class="stickyA">Sticky Element A</div>
 			</div>
 			<section>
 				<div class="inner">
@@ -201,39 +201,39 @@
 		let stickyViewportA = window;
 		let stickyObjA = new Sticky(stickyA, boundaryA, stickyViewportA, true);
 
-		// sticky element B
+		// // sticky element B
 		
-		let stickyB = document.getElementById('stickyB');
-		let boundaryB = document.getElementById('stickyA');
-		let stickyViewportB = window;
-		let stickyObjB = new Sticky(stickyB, boundaryB, stickyViewportB, false);		
+		// let stickyB = document.getElementById('stickyB');
+		// let boundaryB = document.getElementById('stickyA');
+		// let stickyViewportB = window;
+		// let stickyObjB = new Sticky(stickyB, boundaryB, stickyViewportB, false);		
 
 
-		// sticky element inside Modal
-		let stickyModal = document.getElementById('stickyModal');
-		let boundaryModal = document.getElementById('boundaryModal');
-		let stickyViewportModal = document.getElementById('scroller');
-		let stickyObjModal = new Sticky(stickyModal, boundaryModal, stickyViewportModal, false);
+		// // sticky element inside Modal
+		// let stickyModal = document.getElementById('stickyModal');
+		// let boundaryModal = document.getElementById('boundaryModal');
+		// let stickyViewportModal = document.getElementById('scroller');
+		// let stickyObjModal = new Sticky(stickyModal, boundaryModal, stickyViewportModal, false);
 
 
-		let openModal = document.getElementById('open-modal');
-		let closeModal = document.getElementById('close-modal');
-		let modal = document.getElementById('modal');
-		function modalControl(){
-			if (modal.classList.contains('hidden')) {
-				modal.classList.remove('hidden');
-			} else {
-				modal.classList.add('hidden');
-			}
-		}
-		openModal.addEventListener('click', function(event){
-			event.preventDefault();
-			modalControl();
-		});
-		closeModal.addEventListener('click', function(event){
-			event.preventDefault();
-			modalControl();
-		});
+		// let openModal = document.getElementById('open-modal');
+		// let closeModal = document.getElementById('close-modal');
+		// let modal = document.getElementById('modal');
+		// function modalControl(){
+		// 	if (modal.classList.contains('hidden')) {
+		// 		modal.classList.remove('hidden');
+		// 	} else {
+		// 		modal.classList.add('hidden');
+		// 	}
+		// }
+		// openModal.addEventListener('click', function(event){
+		// 	event.preventDefault();
+		// 	modalControl();
+		// });
+		// closeModal.addEventListener('click', function(event){
+		// 	event.preventDefault();
+		// 	modalControl();
+		// });
 
 
 	</script>
