@@ -1,6 +1,13 @@
 class Sticky {
 	constructor(stickyEl, boundaryEl,scroller = window, log = false) {
 		let self = this;
+		let doc = document.documentElement,
+		docLeft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
+		docTop = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+		if (scroller != window) {
+			docTop = scroller.scrollTop;
+		}
+
 		this.stickyEl = stickyEl;
 		this.stickyHolder = stickyEl.parentNode;
 		this.boundaryEl = boundaryEl;
@@ -8,19 +15,11 @@ class Sticky {
 		this.boundaryPos = this.boundaryEl.getBoundingClientRect();
 		this.elY = this.elementPos.y;
 		this.boundY = this.boundaryPos.y + this.boundaryPos.height;
-		this.ogPos = this.elY - this.boundY;
+		this.ogPos = this.elY - this.boundY + docTop;
 		
 		this.log = log;
 		this.scroller = scroller;
 
-		// CLEAN THIS SHIT UP
-		let doc = document.documentElement,
-		docLeft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
-		docTop = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-
-		if (scroller != window) {
-			docTop = scroller.scrollTop;
-		}
 
 		this.scroller.addEventListener('scroll', function() {
 			if (scroller != window) {
@@ -34,6 +33,8 @@ class Sticky {
 				self.logStuff(docTop);
 			}
 		});
+
+		this.logStuff(docTop);
 	}
 	makeSticky(scrollPos) {
 		this.elementPos = this.stickyEl.getBoundingClientRect();
@@ -52,6 +53,5 @@ class Sticky {
 		console.log('boundaryEl pos: '+this.boundY);
 		console.log('this.ogPos: '+this.ogPos);
 		console.log('scrollPos: '+scrollPos);
-		console.log(this.stickyContainer);
 	}
 }
