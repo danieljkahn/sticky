@@ -14,17 +14,31 @@
 		<article id="content">
 			<section class="hero">
 				<h1>Sticky.js Examples</h1>
+
 			</section>
-			<div class="sticky-holder">
-				<div id="stickyA" class="stickyA">Sticky Element A</div>
-			</div>
 			<section>
+				<div class="sticky-holder page-nav">
+					<nav id="page-nav">
+		        <ul>
+              <li><a class="page-nav-link" href="#a" title="">Anchor A</a></li>
+              <li><a class="page-nav-link" href="#b" title="">Anchor B</a></li>
+              <li><a class="page-nav-link" href="#c" title="">Anchor C</a></li>
+              <li><a class="page-nav-link" href="#d" title="">Anchor D</a></li>
+		        </ul>
+		      </nav>
+			</div>
+			</section>
+			
+			<section id="a">
 				<div class="inner">
+					<span class="big-letter">A</span>
 					<h2>
 						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
 					</h2>
 				</div>
 			</section>
+				
+			<section id="b">
 				<div class="sticky-holderB">
 					<div id="stickyB">
 						<h4>Mini-nav whatev</h4>
@@ -37,8 +51,8 @@
 						</ul>
 					</div>
 				</div>
-			<section>
 				<div class="inner">
+					<span class="big-letter">B</span>
 					<h2>
 						War prejudice love merciful will victorious spirit convictions salvation. Ubermensch superiority grandeur enlightenment ultimate snare decieve revaluation. Virtues war ubermensch marvelous insofar intentions philosophy.
 					</h2>
@@ -73,6 +87,28 @@
 					</div>
 				</div>
 			</section>
+			<section id="c"><div class="inner">
+				<span class="big-letter">C</span>
+					<h2>
+						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
+					</h2>
+					<h2>
+						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
+					</h2>
+				</div></section>
+			<section id="d"><div class="inner">
+				<span class="big-letter">D</span>
+					<h2>
+						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
+					</h2>
+					<h2>
+						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
+					</h2>
+				</div><div class="inner">
+					<h2>
+						Holiest overcome transvaluation ocean madness hope good of. Hatred inexpedient intentions deceptions inexpedient ultimate decieve evil dead derive ubermensch. Ocean ascetic abstract grandeur decieve hatred justice ocean strong war dead faithful deceptions.
+					</h2>
+				</div></section>
 		</article>
 	</main>
 
@@ -80,7 +116,7 @@
 	<script type="text/javascript" charset="utf-8" async defer>
 
 		// sticky element A
-		let stickyA = document.getElementById('stickyA');
+		let stickyA = document.getElementById('page-nav');
 		let boundaryA = document.getElementById('boundaryA');
 		let stickyViewportA = window;
 		let stickyObjA = new Sticky(stickyA, boundaryA, stickyViewportA, true);
@@ -88,7 +124,7 @@
 		// sticky element B
 		
 		let stickyB = document.getElementById('stickyB');
-		let boundaryB = document.getElementById('stickyA');
+		let boundaryB = document.getElementById('page-nav');
 		let stickyViewportB = window;
 		let stickyObjB = new Sticky(stickyB, boundaryB, stickyViewportB, false);		
 
