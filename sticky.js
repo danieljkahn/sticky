@@ -29,6 +29,7 @@ class Sticky {
 		console.log(idLocs);
 
 
+
 		this.scroller.addEventListener('scroll', function() {
 			if (scroller != window) {
 				docTop = scroller.scrollTop;
@@ -66,6 +67,7 @@ class Sticky {
 			this.stickyEl.classList.remove('sticky');
 		}
 	}
+	
 	getMenuIdLocs(el,doc) {
 		let ids = [];
 		let links = [];
