@@ -1,5 +1,5 @@
 class Sticky {
-	constructor(stickyEl, boundaryEl,scroller = window, log = false) {
+	constructor(stickyEl, boundaryEl, activeNav, scroller = window, log = false) {
 		var body = document.body,
     		html = document.documentElement;
 		var height = Math.max( body.scrollHeight, body.offsetHeight, 
@@ -39,14 +39,17 @@ class Sticky {
 			self.makeSticky(docTop);
 			console.log(docTop)
 
-			if (docTop < idLocs[0]) {
-				self.clearMenuItems();
-			} else {
-				for (let i = 0; i < idLocs.length; i++) {
-					if (docTop >= idLocs[i] && docTop < idLocs[i+1]) {
-						self.focusMenuItem(i);
-					} else {
+			// highlight active nav element on intersect
+			if (activeNav) {
+				if (docTop < idLocs[0]) {
+					self.clearMenuItems();
+				} else {
+					for (let i = 0; i < idLocs.length; i++) {
+						if (docTop >= idLocs[i] && docTop < idLocs[i+1]) {
+							self.focusMenuItem(i);
+						} else {
 
+						}
 					}
 				}
 			}
